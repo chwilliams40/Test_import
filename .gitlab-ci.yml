@@ -23,6 +23,7 @@ postman_tests:
         entrypoint: [""]
     script:
         - newman --version
-        - newman run "https://api.getpostman.com/collections/2033404-7d95b3c7-c5f3-4eae-bafa-13d3b61fcafb?apikey=PMAK-601af363f1f2f8005c97aa9f-c0ed2c8cfc991f7e141ae4bd813a05fb35" --folder "PayCards"  --env-var "domain=https://qa-api.werner.com"  --global-var "base_path=/workday-sapi/v1" --global-var "client_secret=0719DE249dBf400D90495F9B5167b8eA" --global-var "client_id=2720ce1fc49c40ae86e7a5fede8e8f7f" --global-var "x-correlation-id=Workday_Interrim-sapi"    --reporters cli,junit --reporter-junit-export Results\junitReport.xml
+        - newman run "https://api.getpostman.com/collections/9755093-b6e082a1-4ae7-4c0c-8c82-7d3ef368d214?apikey=PMAK-601af363f1f2f8005c97aa9f-c0ed2c8cfc991f7e141ae4bd813a05fb35"  --env-var "domain=https://qa-api.werner.com" --global-var "base_path=/workday-sapi/v1" --global-var "client_secret=0719DE249dBf400D90495F9B5167b8eA" --global-var "client_id=2720ce1fc49c40ae86e7a5fede8e8f7f" --reporters cli,junit --reporter-junit-export Results\junitReport.xml
+
 
 
