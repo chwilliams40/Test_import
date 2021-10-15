@@ -26,9 +26,11 @@ jobs:
       - uses: actions/checkout@main
 
       # Runs a single command using the runners shell
-      - name: Docker for newman
-        run: docker run -v $(pwd)/test:/etc/newman -t postman/newman:lastest run "https://api.getpostman.com/collections/2033404-9f01d861-2ccb-4320-9b60-ee7a2f940171?apikey=PMAK-601af363f1f2f8005c97aa9f-c0ed2c8cfc991f7e141ae4bd813a05fb35" --folder "Leave of Absence" --env-var "domain=https://qa-api.werner.com" --global-var "base_path=employee-xapi/v1" --global-var "client_secret=0719DE249dBf400D90495F9B5167b8eA" --global-var "client_id=2720ce1fc49c40ae86e7a5fede8e8f7f" --reporters cli,junit --reporter-junit-export Results\junitReport.xml
+      - name: postman/newman_alpine33
+                entrypoint:[""]  
+        run: docker run -v $(pwd)/test:/etc/newman -t postman/newman_alpine33 run "https://api.getpostman.com/collections/2033404-9f01d861-2ccb-4320-9b60-ee7a2f940171?apikey=PMAK-601af363f1f2f8005c97aa9f-c0ed2c8cfc991f7e141ae4bd813a05fb35" --folder "Leave of Absence" --env-var "domain=https://qa-api.werner.com" --global-var "base_path=employee-xapi/v1" --global-var "client_secret=0719DE249dBf400D90495F9B5167b8eA" --global-var "client_id=2720ce1fc49c40ae86e7a5fede8e8f7f" --reporters cli,junit --reporter-junit-export Results\junitReport.xml
 
         
+
 
       
